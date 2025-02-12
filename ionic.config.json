@@ -1,0 +1,7 @@
+{
+  "name": "iondateProject",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
