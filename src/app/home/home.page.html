@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Ion DateTime
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,12 +9,27 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Ion DateTime</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div class="container">
+
+  <ion-button id="click-trigger-datetime">Pick Date and Time</ion-button>
+  <ion-popover class="datetime-popover" trigger="click-trigger-datetime" triggerAction="click" mode="ios">
+    <ng-template>
+    <ion-datetime [showDefaultTitle]="true" [min]="minDate"></ion-datetime>
+    </ng-template>
+  </ion-popover>
+
+
+  <ion-button id="click-trigger-time">Pick Time</ion-button>
+  <ion-popover trigger="click-trigger-time" triggerAction="click" mode="ios">
+    <ng-template>
+      <ion-datetime presentation="time"></ion-datetime>
+    </ng-template>
+  </ion-popover>
+
   </div>
+
 </ion-content>
